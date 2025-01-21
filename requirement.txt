@@ -2,4 +2,8 @@ openai
 pandas 
 numpy 
 python-dotenv
-pip install langchain-groq
+langchain-groq
+langchain-community
+langchain
+pypdf
+-e .
