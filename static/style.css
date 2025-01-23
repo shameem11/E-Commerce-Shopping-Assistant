@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to right, #89f7fe, #66a6ff); /* Vibrant teal-blue gradient */
+}
+
+.wrapper {
+    width: 450px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Softer shadow */
+    border-radius: 15px; /* Rounded corners for a smoother look */
+    overflow: hidden;
+    background-color: #ffffff; /* Pure white background for contrast */
+}
+
+.wrapper .title {
+    background: linear-gradient(to right, #36d1dc, #5b86e5); /* Teal to blue gradient */
+    color: white;
+    line-height: 3;
+    text-align: center;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 15px 15px 0 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.wrapper .box {
+    padding: 20px;
+    min-height: 400px;
+    max-height: 400px;
+    overflow-y: auto;
+    border-top: 1px solid #f0f0f0;
+}
+
+.wrapper .box .item {
+    display: flex;
+    margin: 15px 0;
+    align-items: flex-start;
+}
+
+.wrapper .box .item .icon {
+    background: linear-gradient(to right, #36d1dc, #5b86e5); /* Teal to blue */
+    color: white;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    font-size: 18px;
+    font-weight: 600;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .box .item .msg {
+    background: #36d1dc; /* Teal for user message */
+    color: white;
+    border-radius: 20px;
+    max-width: 70%;
+    margin-left: 15px;
+    padding: 12px 18px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Message box shadow */
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.wrapper .box .item .msg p {
+    margin: 0;
+    word-wrap: break-word; /* Ensure long text breaks */
+}
+
+.wrapper .box .item.right {
+    justify-content: flex-end;
+}
+
+.wrapper .box .item.right .msg {
+    background: #f1f1f1; /* Soft gray for bot response */
+    color: #333;
+    margin-left: 0;
+    margin-right: 15px;
+}
+
+.wrapper .typing-area {
+    width: 100%;
+    background: #f9f9f9; /* Slightly lighter footer area */
+    height: 70px; /* More spacious */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    border-top: 1px solid #ddd;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.05); /* Gentle shadow */
+}
+
+.wrapper .typing-area .input-field {
+    width: 100%;
+    position: relative;
+}
+
+.wrapper .typing-area .input-field input {
+    width: 100%;
+    padding: 12px 20px;
+    border: 1px solid #ddd;
+    border-radius: 30px; /* Rounded input */
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    transition: 0.3s all ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+}
+
+.wrapper .typing-area .input-field input:focus {
+    border-color: #36d1dc; /* Teal border */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Focused shadow */
+}
+
+.wrapper .typing-area .input-field button {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    background: linear-gradient(to right, #36d1dc, #5b86e5); /* Teal to blue gradient */
+    border: none;
+    padding: 10px 25px;
+    border-radius: 30px;
+    color: white;
+    outline: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s all ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .typing-area .input-field button:hover {
+    background: linear-gradient(to right, #30c4c4, #4a80e0); /* Subtle hover color */
+}
+
+.wrapper .typing-area .input-field input:valid ~ button {
+    opacity: 1;
+    pointer-events: auto;
+}
